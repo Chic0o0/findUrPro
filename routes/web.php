@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\AngularController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use App\Http\Controllers\ProductoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::any('{/any}', [AngularController::class, 'index'])->where('any', '^(?!api).*$');
 
 Route::get('/', function () {
     return view('welcome');
