@@ -18,20 +18,20 @@ use App\Http\Controllers\AngularController;
 
 Route::any('{/any}', [AngularController::class, 'index'])->where('any', '^(?!api).*$');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
 
-Route::resource("productos", ProductoController::class);
+// Route::resource("productos", ProductoController::class);
 
-Route::get("/client", [App\Http\Controllers\clientController::class, "index"])
-        ->middleware(["auth.client"])->name("client.index");
+// Route::get("/client", [App\Http\Controllers\clientController::class, "index"])
+//         ->middleware(["auth.client"])->name("client.index");
 
-Route::get("/pro", [App\Http\Controllers\proController::class, "index"])
-        ->middleware(["auth.pro"])->name("pro.index");
+// Route::get("/pro", [App\Http\Controllers\proController::class, "index"])
+//         ->middleware(["auth.pro"])->name("pro.index");
