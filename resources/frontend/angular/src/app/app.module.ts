@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //Rutas
 
-import { APP_ROUTING } from './app.routes';
+//import { APP_ROUTING } from './app.routes';
 
 //Componentes
 
@@ -27,7 +27,7 @@ import { RegisterComponent } from './public/register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    APP_ROUTING
+    // APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
