@@ -7,6 +7,6 @@
 <link rel="stylesheet" href="/assets/angular/styles.ef46db3751d8e999.css"></head>
 <body>
   <app-root></app-root>
-<script src="/assets/angular/runtime.27845ceb5aedcb1f.js" type="module"></script><script src="/assets/angular/polyfills.28914b823ca8a264.js" type="module"></script><script src="/assets/angular/main.b47534c97c6e0e9c.js" type="module"></script>
+<script src="/assets/angular/runtime.27845ceb5aedcb1f.js" type="module"></script><script src="/assets/angular/polyfills.2bc674d83458c252.js" type="module"></script><script src="/assets/angular/main.4a6ff5a979a45532.js" type="module"></script>
 
 </body></html>
