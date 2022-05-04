@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ProductoController;
-use App\Http\Controllers\AngularController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +15,8 @@ use App\Http\Controllers\AngularController;
 
 Route::any('/{any}', [AngularController::class, 'index'])->where('any', '^(?!api).*$');
 
+require __DIR__.'/auth.php';
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -25,8 +24,6 @@ Route::any('/{any}', [AngularController::class, 'index'])->where('any', '^(?!api
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
-
-// require __DIR__.'/auth.php';
 
 // Route::resource("productos", ProductoController::class);
 
