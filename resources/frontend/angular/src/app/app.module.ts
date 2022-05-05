@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 // Servicios
 
@@ -27,6 +28,7 @@ import { RegisterComponent } from './public/register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
     // APP_ROUTING
   ],
   providers: [],
