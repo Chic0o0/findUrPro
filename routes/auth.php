@@ -8,11 +8,11 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('api/register2', [RegisteredUserController::class, 'store'])
+Route::post('api/register', [RegisteredUserController::class, 'store'])
                 ->middleware('guest')
                 ->name('register');
 
-Route::post('api/login2', [AuthenticatedSessionController::class, 'store'])
+Route::post('api/login', [AuthenticatedSessionController::class, 'store'])
                 ->middleware('guest')
                 ->name('login');
 
