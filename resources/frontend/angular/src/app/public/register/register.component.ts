@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
       password: "12341234",
       password_confirmation: "12341234",
     };
+    console.log(usuario);
     this.servicio.addUser(usuario).subscribe(datos=>{
     console.log(datos);
     });

@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     email: "a@prueba.com",
     password: "12341234"
     };
+    console.log(usuario);
     this.servicio.loginUser(usuario).subscribe(datos=>{
     console.log(datos);
     });
