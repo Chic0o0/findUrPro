@@ -14,9 +14,10 @@ export class LoginComponent implements OnInit {
   }
 
   log(){
+    let datos = document.querySelectorAll("input");
     let usuario = {
-    email: "a@prueba.com",
-    password: "12341234"
+    email: datos[0].value,
+    password: datos[1].value
     };
     console.log(usuario);
     this.servicio.loginUser(usuario).subscribe(datos=>{
