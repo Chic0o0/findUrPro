@@ -15,12 +15,12 @@ export class RegisterComponent implements OnInit {
 
   add(){
     let usuario = {
-      name: "hoge",
-      email: "hoge@example.com",
-      password: "password",
-      password_confirmation: "password",
+      name: "peter",
+      email: "a@prueba.com",
+      password: "12341234",
+      password_confirmation: "12341234",
     };
-    this.servicio.newUser(usuario).subscribe(datos=>{
+    this.servicio.addUser(usuario).subscribe(datos=>{
     console.log(datos);
     });
     }

@@ -15,10 +15,10 @@ export class LoginComponent implements OnInit {
 
   log(){
     let usuario = {
-    email: "prueba@gmail.com",
+    email: "a@prueba.com",
     password: "12341234"
     };
-    this.servicio.newUser(usuario).subscribe(datos=>{
+    this.servicio.loginUser(usuario).subscribe(datos=>{
     console.log(datos);
     });
     }
