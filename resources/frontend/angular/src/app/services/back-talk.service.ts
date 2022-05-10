@@ -19,5 +19,5 @@ export class BackTalkService {
     return this.http.post<any>(url, usuario);
       
     }
-    
+    //hacer un metodo que llame a la ruta para logout
 }
