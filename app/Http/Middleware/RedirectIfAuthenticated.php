@@ -23,7 +23,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                //return redirect(RouteServiceProvider::HOME); INTERFIERE AL ESTAR LOGEADO CON LA RUTA DE LAS API, MENOS SI SE USA MIDDLEWARE???
             }
         }
 

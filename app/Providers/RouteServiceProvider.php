@@ -17,9 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    // public const HOME = 'assets/angular';
-    public const HOME = '/../public/assets/angular/index.html';
-
+    // public const HOME = '../../../public/assets/angular/index.html';
     /**
      * Define your route model bindings, pattern filters, etc.
      *
