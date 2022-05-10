@@ -17,6 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
+    // public const HOME = 'assets/angular';
     public const HOME = '/../public/assets/angular/index.html';
 
     /**
