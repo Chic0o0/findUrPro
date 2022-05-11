@@ -14,7 +14,7 @@ export class LogoutComponent implements OnInit {
   }
 
   logout(){
-    let usuario = this.servicio.getUser(); //Uncertain  what to put
+    let usuario = this.servicio.getUser(); 
     console.log(usuario);
     this.servicio.logoutUser(usuario).subscribe(datos=>{
     console.log(datos);
