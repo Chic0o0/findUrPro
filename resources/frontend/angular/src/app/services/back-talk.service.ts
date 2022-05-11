@@ -12,12 +12,17 @@ export class BackTalkService {
   loginUser(usuario: any): Observable<any> {
     const url = 'api/login';
     return this.http.post<any>(url, usuario);
-    }
+  }
 
   addUser(usuario: any): Observable<any> {
     const url = 'api/register';
     return this.http.post<any>(url, usuario);
       
-    }
+  }
+
+  logoutUser(usuario: any): Observable<any> {
+    const url = 'api/logout'
+    return this.http.post<any>(url, usuario);
+  }
     //hacer un metodo que llame a la ruta para logout
 }
