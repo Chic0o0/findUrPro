@@ -24,5 +24,9 @@ export class BackTalkService {
     const url = 'api/logout'
     return this.http.post<any>(url, usuario);
   }
-    //hacer un metodo que llame a la ruta para logout
+
+  getUser(){
+    const url = 'api/user'
+    return this.http.get<any>(url);
+  }
 }
