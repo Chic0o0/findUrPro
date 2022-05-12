@@ -1,2 +1,9 @@
 <app-navbar></app-navbar>
-<button (click)="logout()">Click</button>
+<div class="card logout">
+    <div class="card-body">
+      <h3 class="card-title">Are you sure you want to log out?</h3>
+      <br>
+      <a class="btn btn-primary me-5" (click)="logout()">Logout</a>
+      <a class="btn btn-primary" routerLink="/">Go back</a>
+    </div>
+  </div>

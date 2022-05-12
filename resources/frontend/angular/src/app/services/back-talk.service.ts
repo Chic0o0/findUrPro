@@ -26,7 +26,10 @@ export class BackTalkService {
   }
 
   getUser(){
-    const url = 'api/user'
+    const url = 'api/user';
     return this.http.get<any>(url);
   }
+
+  //Hacer nuevos servicios para acceder a las propiedades del usuario
+
 }
