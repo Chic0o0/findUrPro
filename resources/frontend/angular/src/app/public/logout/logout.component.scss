@@ -1,3 +1,9 @@
+@import "../variables.scss";
+
+*{
+    @include general;
+}
+
 $wLarge : 40%;
 
 .logout{
@@ -6,3 +12,4 @@ $wLarge : 40%;
     margin-right: 30%;
     margin-top: 5%;
 }
+

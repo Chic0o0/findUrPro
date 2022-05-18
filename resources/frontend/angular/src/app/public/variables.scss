@@ -1,2 +1,9 @@
-$font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$defFont: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$deftMargin: 0.2rem;
+$defBox: border-box;
 
+@mixin general {
+    font-family: $defFont;
+    margin: $deftMargin;
+    box-sizing: $defBox;
+}
