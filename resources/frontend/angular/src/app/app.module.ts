@@ -17,6 +17,9 @@ import { LoginComponent } from './public/login/login.component';
 import { RegisterComponent } from './public/register/register.component';
 import { LogoutComponent } from './public/logout/logout.component';
 import { NavbarComponent } from './public/navbar/navbar.component';
+import { ProfileComponent } from './public/profile/profile.component';
+import { SearchComponent } from './public/search/search.component';
+import { FavouritesComponent } from './public/favourites/favourites.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { NavbarComponent } from './public/navbar/navbar.component';
     LoginComponent,
     RegisterComponent,
     LogoutComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileComponent,
+    SearchComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
