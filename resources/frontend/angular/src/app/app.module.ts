@@ -20,6 +20,8 @@ import { NavbarComponent } from './public/navbar/navbar.component';
 import { ProfileComponent } from './public/profile/profile.component';
 import { SearchComponent } from './public/search/search.component';
 import { FavouritesComponent } from './public/favourites/favourites.component';
+import { AboutusComponent } from './public/aboutus/aboutus.component';
+import { ContactComponent } from './public/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { FavouritesComponent } from './public/favourites/favourites.component';
     NavbarComponent,
     ProfileComponent,
     SearchComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    AboutusComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
