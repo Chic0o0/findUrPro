@@ -3,12 +3,3 @@
 *{
     @include general;
 }
-
-@media (max-width: 700px){
-    p{
-        font-size: small;
-    }
-    span{
-        display: none;
-    }
-}
