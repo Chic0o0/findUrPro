@@ -8,7 +8,9 @@ import { BackTalkService } from 'src/app/services/back-talk.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private servicio: BackTalkService) { }
+  constructor(private servicio: BackTalkService) {
+    
+   }
 
   ngOnInit(): void {
   }
