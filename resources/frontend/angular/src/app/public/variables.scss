@@ -1,18 +1,17 @@
 $defFont: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-$deftMargin: 0.2rem;
 $defBox: border-box;
 $imgSize: 100%;
 
 @mixin general{
     font-family: $defFont;
-    margin: $deftMargin;
     box-sizing: $defBox;
     max-width: $imgSize;
 }
 
-.padding{
-    padding: 1.5%;
-    margin: 0%;
+.bottom{
+    margin-bottom: 3%;
 }
 
-
+.top{
+    margin-top: 3%;
+}

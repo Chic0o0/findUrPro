@@ -22,6 +22,7 @@ import { SearchComponent } from './public/search/search.component';
 import { FavouritesComponent } from './public/favourites/favourites.component';
 import { AboutusComponent } from './public/aboutus/aboutus.component';
 import { ContactComponent } from './public/contact/contact.component';
+import { FooterComponent } from './public/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ContactComponent } from './public/contact/contact.component';
     SearchComponent,
     FavouritesComponent,
     AboutusComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

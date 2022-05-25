@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+*{
+    @include general;
+}
+
+.butt >div{
+    margin: 0%;
+    padding: 2%;
+}
+
+.container{
+    margin-top: 3%;
+    
+}
+
