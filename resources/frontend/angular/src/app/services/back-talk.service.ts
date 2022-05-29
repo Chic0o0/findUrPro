@@ -16,8 +16,7 @@ export class BackTalkService {
 
   addUser(usuario: any): Observable<any> {
     const url = 'api/register';
-    return this.http.post<any>(url, usuario);
-      
+    return this.http.post<any>(url, usuario); 
   }
 
   logoutUser(usuario: any): Observable<any> {
