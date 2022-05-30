@@ -8,6 +8,8 @@ import { BackTalkService } from 'src/app/services/back-talk.service';
 })
 export class LoginComponent implements OnInit {
 
+  userData:any={};
+
   constructor(private servicio: BackTalkService) {
     
   }
@@ -26,11 +28,11 @@ export class LoginComponent implements OnInit {
     console.log(usuario);
 
     // This works, tarda un poco mas creo que porque esta usando el middleware
-    this.servicio.loginUser(usuario).subscribe(datosUser=>{console.log(datosUser);return datosUser});
+    this.servicio.loginUser(usuario).subscribe(datosUser=>{this.userData = datosUser});
     //redirigir luego a profile y usar las variables
 
     // This does not work
-    console.log(this.servicio.getUser());
+    console.log(this.userData);
 
     //Necsito sacar datosUser a una variable de alguna forma para manejar los datos
 

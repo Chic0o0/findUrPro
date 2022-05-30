@@ -7,7 +7,7 @@ import { BackTalkService } from 'src/app/services/back-talk.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
+  
   constructor(private servicio: BackTalkService) {
     // Intento de mostrar en el componente datos del usuario, salio mal
     // this.servicio.getUser().subscribe( params => {
