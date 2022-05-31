@@ -15,12 +15,18 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->boolean('pro');
             $table->string('name');
+            $table->string('surname');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->unsignedBigInteger('number');
+            $table->unsignedBigInteger('CP');
+            $table->string('adress');
+            $table->string('city');
+            $table->string('country');
             $table->string('password');
-            $table->string('role')->nullable();
-            $table->rememberToken();
+            $table->rememberToken(); // not used, its automatic in breeze full version
+            $table->timestamp('email_verified_at')->nullable(); // not used, its automatic in breeze full version
             $table->timestamps();
         });
     }
