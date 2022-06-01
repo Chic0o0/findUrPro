@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('favourites', function (Blueprint $table) {
             $table->id();
-            $table->string("userId");
-            $table->string("likedUserId");
-            $table->foreign("userId")->references("id")->on("users")->onUpdate("cascade")->onDelete("cascade");
-            $table->foreign("likedUserId")->references("id")->on("users")->onUpdate("cascade")->onDelete("cascade");
+            $table->unsignedBigInteger("user_id");
+            $table->unsignedBigInteger("liked_user_id");
+            $table->tinyInteger("mark");
+            $table->foreign("user_id")->references("id")->on("users")->onUpdate("cascade")->onDelete("cascade");
+            $table->foreign("liked_user_id")->references("id")->on("users")->onUpdate("cascade")->onDelete("cascade");
             $table->timestamps();
         });
     }
