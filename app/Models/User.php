@@ -49,7 +49,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
-    public function Favourites(){
+    public function User(){
         return $this ->hasMany("App\Models\Favourites");
     }
 }

@@ -8,18 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Favourites extends Model
 {
     use HasFactory;
-    public $fillable = ['name',
-    'surname',
-    'email',
-    'number',
-    'CP',
-    'adress',
-    'city',
-    'country',
-    'password',
-    'pro'];
+    public $fillable = ['user_id', 'liked_user_id', 'mark'];
 
-    public function User(){
-        return $this ->hasMany("App\Models\User");
+    public function Favs(){
+        return $this ->hasMany("App\Models\Favourites");
     }
 }
