@@ -19,8 +19,15 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'surname',
         'email',
+        'number',
+        'CP',
+        'adress',
+        'city',
+        'country',
         'password',
+        'pro'
     ];
 
     /**
@@ -42,7 +49,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
-    public function mFavourites(){
-        return $this ->hasMany("App\Models\mFavourites");
+    public function Favourites(){
+        return $this ->hasMany("App\Models\Favourites");
     }
 }
