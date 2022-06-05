@@ -17,6 +17,8 @@ export class RegisterComponent implements OnInit {
   add(){
     let datos = document.querySelectorAll("input");
 
+    //Need to use file upload from angular and include it in usuario, and update models and migrations
+
     let usuario = {
       name: datos[0].value,
       surname: datos[1].value,
