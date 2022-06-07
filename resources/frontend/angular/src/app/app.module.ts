@@ -23,6 +23,7 @@ import { FavouritesComponent } from './public/favourites/favourites.component';
 import { AboutusComponent } from './public/aboutus/aboutus.component';
 import { ContactComponent } from './public/contact/contact.component';
 import { FooterComponent } from './public/footer/footer.component';
+import { UpdateProfileComponent } from './public/update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FooterComponent } from './public/footer/footer.component';
     FavouritesComponent,
     AboutusComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,

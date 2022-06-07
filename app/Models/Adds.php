@@ -11,6 +11,6 @@ class Adds extends Model
     public $fillable = ['user_id', 'photo', 'text', 'title', 'prize'];
 
     public function Adds(){
-        return $this ->hasMany("App\Models\Favourites");
+        return $this ->hasMany("App\Models\Adds");
     }
 }

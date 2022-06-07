@@ -1,0 +1,99 @@
+<div class="ms-5 me-5">
+    <h2>Update your personal info and your adds</h2>
+    <br>
+    <div class="container">
+        <h4>Update your info</h4>
+        <div class="mb-3">
+        <label for="exampleInput8" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInput8" value="{{profileData.name}}">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInput9" class="form-label">Surname</label>
+        <input type="text" class="form-control" id="exampleInput9" value="{{profileData.surname}}">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInput1" aria-describedby="emailHelp" value="{{profileData.email}}">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInput2" class="form-label">Number</label>
+        <input type="email" class="form-control" id="exampleInput2" aria-describedby="emailHelp" value="{{profileData.number}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInput4" class="form-label">Adress</label>
+            <input type="email" class="form-control" id="exampleInput4" aria-describedby="emailHelp" value="{{profileData.adress}}">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInput3" class="form-label">C.P.</label>
+        <input type="email" class="form-control" id="exampleInput3" aria-describedby="emailHelp" value="{{profileData.CP}}">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInput5" class="form-label">City</label>
+        <input type="email" class="form-control" id="exampleInput5" aria-describedby="emailHelp" value="{{profileData.city}}">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInput6" class="form-label">Country</label>
+        <input type="email" class="form-control" id="exampleInput6" aria-describedby="emailHelp" value="{{profileData.country}}">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInput7" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInput7">
+        </div>
+        <!-- <div class="mb-3">
+        <label for="exampleInput8" class="form-label">Repeat password</label>
+        <input type="password" class="form-control" id="exampleInpu8">
+        </div> -->
+        <div class="mb-3">
+            <button class="btn btn-primary" (click)="updateInfo()">Submit</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <h4>Create new adds</h4>
+            <div class="col-12">
+                <div class="mb-3">
+                <label for="exampleInput9" class="form-label">Photo</label>
+                <input type="text" class="form-control" id="exampleInput9">
+                </div>
+                <div class="mb-3">
+                <label for="exampleInput10" class="form-label">Text</label>
+                <input type="text" class="form-control" id="exampleInput10">
+                </div>
+                <div class="mb-3">
+                <label for="exampleInput11" class="form-label">Title</label>
+                <input type="text" class="form-control" id="exampleInput11">
+                </div>
+                <div class="mb-3">
+                <label for="exampleInput12" class="form-label">Prize</label>
+                <input type="text" class="form-control" id="exampleInput12">
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" (click)="updateInfo()">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Update your old adds</h4>
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="exampleInput13" class="form-label">Photo</label>
+                    <input type="text" class="form-control" id="exampleInput13" value="{{addsData.value}}">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInput13" class="form-label">Text</label>
+                    <input type="text" class="form-control" id="exampleInput13" value="{{addsData.value}}">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInput13" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="exampleInput13" value="{{addsData.value}}">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInput13" class="form-label">Prize</label>
+                    <input type="text" class="form-control" id="exampleInput13" value="{{addsData.value}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    

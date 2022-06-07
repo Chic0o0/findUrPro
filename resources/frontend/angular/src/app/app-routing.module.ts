@@ -12,6 +12,7 @@ import { RegisterComponent } from './public/register/register.component';
 import { ProfileComponent } from './public/profile/profile.component';
 import { SearchComponent } from './public/search/search.component';
 import { FavouritesComponent } from './public/favourites/favourites.component';
+import { UpdateProfileComponent } from './public/update-profile/update-profile.component';
 
 const routes: Routes = [
     {path: "aboutus", component:AboutusComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path: "profile", component:ProfileComponent},
     {path: "search", component:SearchComponent},
     {path: "favourites", component:FavouritesComponent},
+    {path: "updateprofile", component:UpdateProfileComponent},
     {path: "**", component:HomeComponent}, 
 ];
 
