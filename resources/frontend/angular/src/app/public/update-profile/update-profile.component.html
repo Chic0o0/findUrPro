@@ -5,39 +5,39 @@
         <h4>Update your info</h4>
         <div class="mb-3">
         <label for="exampleInput8" class="form-label">Name</label>
-        <input type="text" class="form-control" id="exampleInput8" value="{{profileData.name}}">
+        <input type="text" class="form-control updateInfo" id="i1" value="{{profileData.name}}">
         </div>
         <div class="mb-3">
         <label for="exampleInput9" class="form-label">Surname</label>
-        <input type="text" class="form-control" id="exampleInput9" value="{{profileData.surname}}">
+        <input type="text" class="form-control updateInfo" id="i2" value="{{profileData.surname}}">
         </div>
         <div class="mb-3">
         <label for="exampleInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInput1" aria-describedby="emailHelp" value="{{profileData.email}}">
+        <input type="email" class="form-control updateInfo" id="i3" aria-describedby="emailHelp" value="{{profileData.email}}">
         </div>
         <div class="mb-3">
         <label for="exampleInput2" class="form-label">Number</label>
-        <input type="email" class="form-control" id="exampleInput2" aria-describedby="emailHelp" value="{{profileData.number}}">
+        <input type="email" class="form-control updateInfo" id="i4" aria-describedby="emailHelp" value="{{profileData.number}}">
         </div>
         <div class="mb-3">
             <label for="exampleInput4" class="form-label">Adress</label>
-            <input type="email" class="form-control" id="exampleInput4" aria-describedby="emailHelp" value="{{profileData.adress}}">
+            <input type="email" class="form-control updateInfo" id="i5" aria-describedby="emailHelp" value="{{profileData.adress}}">
         </div>
         <div class="mb-3">
         <label for="exampleInput3" class="form-label">C.P.</label>
-        <input type="email" class="form-control" id="exampleInput3" aria-describedby="emailHelp" value="{{profileData.CP}}">
+        <input type="email" class="form-control updateInfo" id="i6" aria-describedby="emailHelp" value="{{profileData.CP}}">
         </div>
         <div class="mb-3">
         <label for="exampleInput5" class="form-label">City</label>
-        <input type="email" class="form-control" id="exampleInput5" aria-describedby="emailHelp" value="{{profileData.city}}">
+        <input type="email" class="form-control updateInfo" id="i7" aria-describedby="emailHelp" value="{{profileData.city}}">
         </div>
         <div class="mb-3">
         <label for="exampleInput6" class="form-label">Country</label>
-        <input type="email" class="form-control" id="exampleInput6" aria-describedby="emailHelp" value="{{profileData.country}}">
+        <input type="email" class="form-control updateInfo" id="i8" aria-describedby="emailHelp" value="{{profileData.country}}">
         </div>
         <div class="mb-3">
         <label for="exampleInput7" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInput7">
+        <input type="password" class="form-control updateInfo" id="i9">
         </div>
         <!-- <div class="mb-3">
         <label for="exampleInput8" class="form-label">Repeat password</label>
@@ -54,43 +54,46 @@
             <div class="col-12">
                 <div class="mb-3">
                 <label for="exampleInput9" class="form-label">Photo</label>
-                <input type="text" class="form-control" id="exampleInput9">
+                <input type="text" class="form-control createAdd" id="ia1">
                 </div>
                 <div class="mb-3">
                 <label for="exampleInput10" class="form-label">Text</label>
-                <input type="text" class="form-control" id="exampleInput10">
+                <input type="text" class="form-control createAdd" id="ia2">
                 </div>
                 <div class="mb-3">
                 <label for="exampleInput11" class="form-label">Title</label>
-                <input type="text" class="form-control" id="exampleInput11">
+                <input type="text" class="form-control createAdd" id="ia3">
                 </div>
                 <div class="mb-3">
                 <label for="exampleInput12" class="form-label">Prize</label>
-                <input type="text" class="form-control" id="exampleInput12">
+                <input type="text" class="form-control createAdd" id="ia4">
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-primary" (click)="updateInfo()">Submit</button>
+                    <button class="btn btn-primary" (click)="insertAdd()">Submit</button>
                 </div>
             </div>
         </div>
         <div class="row">
             <h4>Update your old adds</h4>
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
                 <div class="mb-3">
                     <label for="exampleInput13" class="form-label">Photo</label>
-                    <input type="text" class="form-control" id="exampleInput13" value="{{addsData.value}}">
+                    <input type="text" class="form-control updateAdd" id="ib1" value="{{addsData.value}}">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInput13" class="form-label">Text</label>
-                    <input type="text" class="form-control" id="exampleInput13" value="{{addsData.value}}">
+                    <input type="text" class="form-control updateAdd" id="ib2" value="{{addsData.value}}">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInput13" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="exampleInput13" value="{{addsData.value}}">
+                    <input type="text" class="form-control updateAdd" id="ib3" value="{{addsData.value}}">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInput13" class="form-label">Prize</label>
-                    <input type="text" class="form-control" id="exampleInput13" value="{{addsData.value}}">
+                    <input type="text" class="form-control updateAdd" id="ib4" value="{{addsData.value}}">
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" (click)="updateAdds()">Submit</button>
                 </div>
             </div>
         </div>
