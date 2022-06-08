@@ -32,36 +32,36 @@ export class UpdateProfileComponent implements OnInit {
 
     let userInfo = {
       name: info[0].value,
-      surname: info[0].value,
-      email: info[0].value,
-      number: document.getElementById("i4")?.textContent,
-      CP: document.getElementById("i5")?.textContent,
-      adress: document.getElementById("i6")?.textContent,
-      city: document.getElementById("i7")?.textContent,
-      country: document.getElementById("i8")?.textContent,
-      password: document.getElementById("i9")?.textContent
+      surname: info[1].value,
+      email: info[2].value,
+      number: info[3].value,
+      adress: info[4].value,
+      CP: info[5].value,
+      city: info[6].value,
+      country: info[7].value,
+      password: info[8].value,
     }
-    // console.log(userInfo);
+    console.log(userInfo);
     // this.servicio.addUser(usuario)
     // .subscribe(datos=>{console.log(datos);});
   }
   insertAdd(){
-    let info = document.getElementsByClassName("updateInfo");
+    let info = document.querySelectorAll("input");
     let addInfo = {
-      photo: info[0].nodeValue,
-      text: info[1].nodeValue,
-      title: info[2].nodeValue,
-      prize: info[3].nodeValue,
+      photo: info[9].value,
+      text: info[10].value,
+      title: info[11].value,
+      prize: info[12].value,
     }
     console.log(addInfo);
   }
   updateAdds(){
-    let info = document.getElementsByClassName("updateInfo");
+    let info = document.querySelectorAll("input");
     let addInfo = {
-      photo: info[0].nodeValue,
-      text: info[1].nodeValue,
-      title: info[2].nodeValue,
-      prize: info[3].nodeValue,
+      photo: info[13].value,
+      text: info[14].value,
+      title: info[15].value,
+      prize: info[16].value,
     }
     console.log(addInfo);
   }
