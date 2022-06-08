@@ -8,6 +8,8 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
+// All of Breeze routes (look it up, now with an API version)
+
 Route::post('api/register', [RegisteredUserController::class, 'store'])
                 ->middleware('guest')
                 ->name('register');
@@ -35,3 +37,13 @@ Route::post('api/email/verification-notification', [EmailVerificationNotificatio
 Route::post('api/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth')
                 ->name('logout');
+
+// Routes for user table, not Breeze original
+
+Route::post('api/update-users', [AddsController::class, 'update'])
+                ->middleware('auth')
+                ->name('update.users');
+
+// Routes for adds table
+
+// Routes for favourites table
