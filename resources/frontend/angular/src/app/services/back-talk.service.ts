@@ -9,14 +9,14 @@ export class BackTalkService {
 
   constructor(private http: HttpClient) { }
     
-  loginUser(usuario: any): Observable<any> {
-    const url = 'api/login';
-    return this.http.post<any>(url, usuario);
-  }
-
   addUser(usuario: any): Observable<any> {
     const url = 'api/register';
     return this.http.post<any>(url, usuario); 
+  }
+
+  loginUser(usuario: any): Observable<any> {
+    const url = 'api/login';
+    return this.http.post<any>(url, usuario);
   }
 
   logoutUser(usuario: any): Observable<any> {
@@ -24,6 +24,10 @@ export class BackTalkService {
     return this.http.post<any>(url, usuario);
   }
 
+  updateUser(usuario:any):Observable<any>{
+    const url = 'api/update-users'
+    return this.http.post<any>(url, usuario);
+  }
   getUser(){
     const url = 'api/user';
     return this.http.get<any>(url);

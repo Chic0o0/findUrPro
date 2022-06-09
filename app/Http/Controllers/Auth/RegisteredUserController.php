@@ -59,7 +59,7 @@ class RegisteredUserController extends Controller
         return response()->noContent();
     }
 
-    public function update(Request $request){
+    public function updating(Request $request, User $updatable){
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -73,22 +73,14 @@ class RegisteredUserController extends Controller
             'password' => ['required', Rules\Password::defaults()
                 // ,'confirmed'
             ],
-            'pro' => ['required', 'bool']
         ]);
 
-        User::update([
-            'name' => $request->name,
-            'surname' => $request->surname,
-            'email' => $request->email,
-            'number' => $request->number,
-            'CP' => $request->CP,
-            'adress' => $request->adress,
-            'city' => $request->city,
-            'country' => $request->country,
-            'password' => Hash::make($request->password),
-            'pro' => $request->pro
-        ]);
+        $updatable->update($request->all());
 
-        return response()->noContent();
+        // Here Breeze does not admit laravel update method. The error: 
+        // "Symfony\\Component\\HttpFoundation\\Response::setContent(): Argument #1 ($content) must be of type ?string, Illuminate\\Routing\\ResponseFactory given, called in C:\\xampp\\htdocs\\findUrPro\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php on line 72"
+        // Furthermore, I havent found more documentation about a method that provides an update method on Breeze API, so its a hard lock?
+        
+        return response();
     }
 }

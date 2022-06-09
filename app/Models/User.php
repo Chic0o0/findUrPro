@@ -29,6 +29,17 @@ class User extends Authenticatable
         'password',
         'pro'
     ];
+    protected $updatable = [
+        'name',
+        'surname',
+        'email',
+        'number',
+        'CP',
+        'adress',
+        'city',
+        'country',
+        'password'
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -42,8 +42,8 @@ export class UpdateProfileComponent implements OnInit {
       password: info[8].value,
     }
     console.log(userInfo);
-    // this.servicio.addUser(usuario)
-    // .subscribe(datos=>{console.log(datos);});
+    this.servicio.updateUser(userInfo)
+    .subscribe(datos=>{console.log(datos);});
   }
   insertAdd(){
     let info = document.querySelectorAll("input");
