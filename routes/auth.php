@@ -46,4 +46,6 @@ Route::post('api/update-users', [RegisteredUserController::class, 'updating'])
 
 // Routes for adds table
 
+
+
 // Routes for favourites table

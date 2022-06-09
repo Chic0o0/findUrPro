@@ -28,9 +28,45 @@ export class BackTalkService {
     const url = 'api/update-users'
     return this.http.post<any>(url, usuario);
   }
+
   getUser(){
     const url = 'api/user';
     return this.http.get<any>(url);
+  }
+
+  createAdd(){
+    const url = 'api/';
+    return this.http.get<any>(url);
+  }
+
+  deleteAdd(){
+    const url = 'api/';
+    return this.http.get<any>(url);
+  }
+
+  updateAdd(){
+    const url = 'api/';
+    return this.http.get<any>(url);
+  }
+
+  readAdd(){
+    
+  }
+
+  createFav(){
+    
+  }
+
+  deleteFav(){
+
+  }
+
+  updateFav(){
+
+  }
+
+  readFav(){
+
   }
 
   //Hacer nuevos servicios para acceder a las propiedades del usuario
