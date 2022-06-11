@@ -79,7 +79,7 @@ class RegisteredUserController extends Controller
 
         // Here Breeze does not admit laravel update method. The error: 
         // "Symfony\\Component\\HttpFoundation\\Response::setContent(): Argument #1 ($content) must be of type ?string, Illuminate\\Routing\\ResponseFactory given, called in C:\\xampp\\htdocs\\findUrPro\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php on line 72"
-        // Furthermore, I havent found more documentation about a method that provides an update method on Breeze API, so its a hard lock?
+        // Furthermore, I havent found more documentation about a method that provides an update option on Breeze API, so its a hard lock?
         
         return response();
     }

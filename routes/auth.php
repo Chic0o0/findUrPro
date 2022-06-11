@@ -43,9 +43,3 @@ Route::post('api/logout', [AuthenticatedSessionController::class, 'destroy'])
 Route::post('api/update-users', [RegisteredUserController::class, 'updating'])
                 ->middleware('auth')
                 ->name('update.users');
-
-// Routes for adds table
-
-
-
-// Routes for favourites table

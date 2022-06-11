@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Adds;
+use App\Models\Favourites;
 
-class AddsController extends Controller
+class FavouritesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -57,31 +57,11 @@ class AddsController extends Controller
      */
     public function create(Request $request)
     {
-        $request->validate([
-            'user_id' => 'required',
-            'photo' => 'required',
-            'text' => 'required',
-            'title' => 'required',
-            'prize' => 'required'
-        ]);
-
-        Adds::create($request->all());
-        
-        return response();
+        //
     }
 
     public function read(Request $request){
-        $request->validate([
-            'user_id' => 'required',
-            'photo' => 'required',
-            'text' => 'required',
-            'title' => 'required',
-            'prize' => 'required'
-        ]);
 
-        Adds::read($request->all());
-
-        return response();
     }
 
     /**
@@ -91,19 +71,9 @@ class AddsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Adds $updateable)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'user_id' => 'required',
-            'photo' => 'required',
-            'text' => 'required',
-            'title' => 'required',
-            'prize' => 'required'
-        ]);
-
-        $updateable->update($request->all());
-
-        return response();
+        //
     }
 
     /**
@@ -112,10 +82,8 @@ class AddsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete(Adds $destroyable)
+    public function delete($id)
     {
-        $destroyable->delete();
-
-        return response();
+        //
     }
 }

@@ -20,6 +20,8 @@ require __DIR__.'/auth.php';
 
 require __DIR__.'/api.php';
 
+require __DIR__.'/myRoutes.php';
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');

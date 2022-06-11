@@ -34,39 +34,44 @@ export class BackTalkService {
     return this.http.get<any>(url);
   }
 
-  createAdd(){
-    const url = 'api/';
-    return this.http.get<any>(url);
+  createAdd(add:any):Observable<any>{
+    const url = 'api/cAdd';
+    return this.http.post<any>(url, add);
   }
 
-  deleteAdd(){
-    const url = 'api/';
-    return this.http.get<any>(url);
+  readAdd(add:any):Observable<any>{
+    const url = 'api/rAdd';
+    return this.http.get<any>(url, add);
   }
 
-  updateAdd(){
-    const url = 'api/';
-    return this.http.get<any>(url);
+  updateAdd(add:any):Observable<any>{
+    const url = 'api/uAdd';
+    return this.http.post<any>(url, add);
   }
 
-  readAdd(){
-    
+  deleteAdd(add:any):Observable<any>{
+    const url = 'api/dAdd';
+    return this.http.post<any>(url, add);
   }
 
-  createFav(){
-    
+  createFav(fav:any):Observable<any>{
+    const url = 'api/cFav';
+    return this.http.post<any>(url, fav);
   }
 
-  deleteFav(){
-
+  readFav(fav:any):Observable<any>{
+    const url = 'api/rFav';
+    return this.http.get<any>(url, fav);
   }
 
-  updateFav(){
-
+  updateFav(fav:any):Observable<any>{
+    const url = 'api/uFav';
+    return this.http.post<any>(url, fav);
   }
 
-  readFav(){
-
+  deleteFav(fav:any):Observable<any>{
+    const url = 'api/dFav';
+    return this.http.post<any>(url, fav);
   }
 
   //Hacer nuevos servicios para acceder a las propiedades del usuario
