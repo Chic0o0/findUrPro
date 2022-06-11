@@ -26,6 +26,7 @@ export class UpdateProfileComponent implements OnInit {
 
   updateInfo(){
     let info = document.querySelectorAll("input");
+
     info.forEach(element => {
       console.log(element.value);
     });
@@ -45,16 +46,23 @@ export class UpdateProfileComponent implements OnInit {
     this.servicio.updateUser(userInfo)
     .subscribe(datos=>{console.log(datos);});
   }
+  
   insertAdd(){
+    
     let info = document.querySelectorAll("input");
+
     let addInfo = {
+      user_id : this.profileData[0],
       photo: info[9].value,
       text: info[10].value,
       title: info[11].value,
       prize: info[12].value,
     }
     console.log(addInfo);
+    this.servicio.createAdd(addInfo)
+    .subscribe(datos=>{console.log(datos);});
   }
+
   updateAdds(){
     let info = document.querySelectorAll("input");
     let addInfo = {
