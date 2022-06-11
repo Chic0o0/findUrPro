@@ -56,7 +56,7 @@ class AddsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request)
-    {
+    {        
         $request->validate([
             'user_id' => 'required',
             'photo' => 'required',
@@ -65,8 +65,14 @@ class AddsController extends Controller
             'prize' => 'required'
         ]);
 
-        Adds::create($request->all());
-        
+        return $add = Adds::create([
+            'user_id' =>$request->user_id,
+            'photo' =>$request->photo,
+            'text' =>$request->text,
+            'title' =>$request->title,
+            'prize' =>$request->prize
+        ]);
+
         return response();
     }
 

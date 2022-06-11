@@ -9,6 +9,8 @@ Route::post('api/cAdd', [AddsController::class, 'create'])
                 ->middleware('auth')
                 ->name('createAdd');
 
+// return AddsController::create()->post();
+
 Route::get('api/rAdd', [AddsController::class, 'read'])
                 ->middleware('auth')
                 ->name('readAdd');

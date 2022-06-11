@@ -50,9 +50,10 @@ export class UpdateProfileComponent implements OnInit {
   insertAdd(){
     
     let info = document.querySelectorAll("input");
+    console.log(this.profileData);
 
     let addInfo = {
-      user_id : this.profileData[0],
+      user_id : this.profileData.id,
       photo: info[9].value,
       text: info[10].value,
       title: info[11].value,

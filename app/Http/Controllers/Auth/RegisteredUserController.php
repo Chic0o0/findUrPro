@@ -75,7 +75,46 @@ class RegisteredUserController extends Controller
             ],
         ]);
 
-        $updatable->update($request->all());
+        // $updatable->update($request->all());
+
+        // return $user = User::update([
+        //     'name' => $request->name,
+        //     'surname' => $request->surname,
+        //     'email' => $request->email,
+        //     'number' => $request->number,
+        //     'CP' => $request->CP,
+        //     'adress' => $request->adress,
+        //     'city' => $request->city,
+        //     'country' => $request->country,
+        //     'password' => Hash::make($request->password),
+        // ]);
+
+        // DB::table('user')->update([ 
+        //     'name' => $request->name,
+        //     'surname' => $request->surname,
+        //     'email' => $request->email,
+        //     'number' => $request->number,
+        //     'CP' => $request->CP,
+        //     'adress' => $request->adress,
+        //     'city' => $request->city,
+        //     'country' => $request->country,
+        //     'password' => Hash::make($request->password),
+        // ]);
+
+        return $user = (new User)->update([ 
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'email' => $request->email,
+            'number' => $request->number,
+            'CP' => $request->CP,
+            'adress' => $request->adress,
+            'city' => $request->city,
+            'country' => $request->country,
+            'password' => Hash::make($request->password),
+        ]); 
+
+
+        // The explanation below is probably wrong, the error probably has to do with the routes and not sending a JSON
 
         // Here Breeze does not admit laravel update method. The error: 
         // "Symfony\\Component\\HttpFoundation\\Response::setContent(): Argument #1 ($content) must be of type ?string, Illuminate\\Routing\\ResponseFactory given, called in C:\\xampp\\htdocs\\findUrPro\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php on line 72"
