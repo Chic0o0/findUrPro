@@ -77,15 +77,8 @@ class AddsController extends Controller
     }
 
     public function read(Request $request){
-        $request->validate([
-            'user_id' => 'required',
-            'photo' => 'required',
-            'text' => 'required',
-            'title' => 'required',
-            'prize' => 'required'
-        ]);
-
-        Adds::read($request->all());
+        
+        Adds::read();
 
         return response();
     }
