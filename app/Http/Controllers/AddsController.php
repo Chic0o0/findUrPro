@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Adds;
+use DB;
 
 class AddsController extends Controller
 {
@@ -76,11 +77,20 @@ class AddsController extends Controller
         return response();
     }
 
-    public function read(Request $request){
+    public function read(Adds $add){
         
-        Adds::read();
+        // $qry = 'SELECT * FROM adds WHERE user_id LIKE "1"';
+        // $ppl = DB::select($qry);
+        // print_r($ppl);
+        // return $ppl;
 
-        return response();
+        // return $add->read();
+
+        return $adds = DB::table('adds')->select('photo','text','title', 'prize')->get();
+
+        // return $adds = Adds::read();
+
+        return response(); 
     }
 
     /**
@@ -100,7 +110,7 @@ class AddsController extends Controller
             'prize' => 'required'
         ]);
 
-        $updateable->update($request->all());
+        return $updateable->update($request->all());
 
         return response();
     }

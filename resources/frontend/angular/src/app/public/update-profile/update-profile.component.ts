@@ -10,6 +10,8 @@ export class UpdateProfileComponent implements OnInit {
 
   profileData:any = {};
   addsData:any = {};
+  
+  // userAddsData:any = {};
 
   constructor(private servicio: BackTalkService) { }
 
@@ -22,6 +24,13 @@ export class UpdateProfileComponent implements OnInit {
     this.servicio.readAdd().subscribe( params => {
       this.addsData = params;
     })
+
+    // element has an any type
+    // this.addsData.forEach(element => {
+    //   if(element.user_id = this.profileData.id){
+    //     this.userAddsData.push(element);
+    //   }
+    // });
   }
 
   updateInfo(){
@@ -79,6 +88,7 @@ export class UpdateProfileComponent implements OnInit {
   }
 
   show(){
-    console.log(this.addsData);
+    console.log(typeof this.addsData);
+    console.log(this.addsData[0].photo);
   }
 }
