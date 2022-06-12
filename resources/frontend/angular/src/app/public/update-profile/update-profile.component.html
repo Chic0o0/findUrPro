@@ -77,25 +77,26 @@
             <h4>Update your old adds</h4>
             <div class="col-12 col-lg-4">
                 <div class="mb-3">
-                    <label for="exampleInput13" class="form-label">Photo</label>
-                    <input type="text" class="form-control updateAdd" id="ib1" value="{{addsData.value}}">
+                    <label for="exampleInput13" class="form-label" va>Photo</label>
+                    <input type="text" class="form-control updateAdd" id="ib1" value="{{addsData[0].photo}}">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInput13" class="form-label">Text</label>
-                    <input type="text" class="form-control updateAdd" id="ib2" value="{{addsData.value}}">
+                    <input type="text" class="form-control updateAdd" id="ib2" value="{{addsData[0].text}}">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInput13" class="form-label">Title</label>
-                    <input type="text" class="form-control updateAdd" id="ib3" value="{{addsData.value}}">
+                    <input type="text" class="form-control updateAdd" id="ib3" value="{{addsData[0].title}}">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInput13" class="form-label">Prize</label>
-                    <input type="text" class="form-control updateAdd" id="ib4" value="{{addsData.value}}">
+                    <input type="text" class="form-control updateAdd" id="ib4" value="{{addsData[0].prize}}">
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-primary" (click)="updateAdds()">Submit</button>
                 </div>
             </div>
+            <button (click) = "show()">Button to see all adds</button>
         </div>
     </div>
 </div>

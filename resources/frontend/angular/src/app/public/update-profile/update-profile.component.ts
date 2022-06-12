@@ -19,9 +19,9 @@ export class UpdateProfileComponent implements OnInit {
     })
     
     // Hacer similar
-    // this.servicio.getUser().subscribe( params => {
-    //   this.profileData = params;
-    // })
+    this.servicio.readAdd().subscribe( params => {
+      this.addsData = params;
+    })
   }
 
   updateInfo(){
@@ -67,11 +67,18 @@ export class UpdateProfileComponent implements OnInit {
   updateAdds(){
     let info = document.querySelectorAll("input");
     let addInfo = {
+      user_id : this.profileData.id,
       photo: info[13].value,
       text: info[14].value,
       title: info[15].value,
       prize: info[16].value,
     }
     console.log(addInfo);
+    this.servicio.updateAdd(addInfo)
+    .subscribe(datos=>{console.log(datos);});
+  }
+
+  show(){
+    console.log(this.addsData);
   }
 }

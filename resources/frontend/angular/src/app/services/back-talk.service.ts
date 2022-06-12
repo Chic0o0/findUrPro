@@ -39,9 +39,9 @@ export class BackTalkService {
     return this.http.post<any>(url, add);
   }
 
-  readAdd(add:any):Observable<any>{
+  readAdd(){
     const url = 'api/rAdd';
-    return this.http.get<any>(url, add);
+    return this.http.get<any>(url);
   }
 
   updateAdd(add:any):Observable<any>{
@@ -53,6 +53,8 @@ export class BackTalkService {
     const url = 'api/dAdd';
     return this.http.post<any>(url, add);
   }
+
+  // En produccion
 
   createFav(fav:any):Observable<any>{
     const url = 'api/cFav';
