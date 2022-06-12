@@ -86,7 +86,7 @@ class AddsController extends Controller
 
         // return $add->read();
 
-        return $adds = DB::table('adds')->select('photo','text','title', 'prize')->get();
+        return $adds = DB::table('adds')->select('user_id','photo','text','title', 'prize')->get();
 
         // return $adds = Adds::read();
 
@@ -103,14 +103,20 @@ class AddsController extends Controller
     public function update(Request $request, Adds $updateable)
     {
         $request->validate([
-            'user_id' => 'required',
             'photo' => 'required',
             'text' => 'required',
             'title' => 'required',
             'prize' => 'required'
         ]);
 
-        return $updateable->update($request->all());
+        return $user = Adds::update([
+            'photo' =>$request->photo,
+            'text' =>$request->text,
+            'title' =>$request->title,
+            'prize' =>$request->prize
+        ]);
+
+        // return $updateable->update($request->all());
 
         return response();
     }
