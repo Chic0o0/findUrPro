@@ -86,7 +86,7 @@ class AddsController extends Controller
 
         // return $add->read();
 
-        return $adds = DB::table('adds')->select('user_id','photo','text','title', 'prize')->get();
+        return $adds = DB::table('adds')->select('id','user_id','photo','text','title', 'prize')->get();
 
         // return $adds = Adds::read();
 
@@ -127,9 +127,10 @@ class AddsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete(Adds $destroyable)
+    public function delete()
     {
-        $destroyable->delete();
+        $add = User::find(1);
+        $add->delete();
 
         return response();
     }

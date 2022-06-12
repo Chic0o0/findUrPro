@@ -75,7 +75,7 @@
         </div>
         <div class="row">
             <h4>Update your old adds</h4>
-            <button class="btn btn-primary" (click)="show()">Show your adds</button>
+            <button class="btn btn-primary" (click)="showAdds()">Show your adds</button>
             <div class="col-12 col-lg-4" *ngFor="let add of userAddsData">
                 <div class="mb-3">
                     <label for="exampleInput13" class="form-label" va>Photo</label>
@@ -95,6 +95,7 @@
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-primary" (click)="updateAdds()">Submit</button>
+                    <button class="btn btn-danger" (click)="deleteAdds()">Delete add</button>
                 </div>
             </div>
         </div>
