@@ -101,9 +101,12 @@ export class UpdateProfileComponent implements OnInit {
         console.log(value);
       }
     }
+
+    console.log(this.userAddsData);
   }
 
-  deleteAdds(){
-    // this.servicio.deleteAdd().subscribe(datos=>{console.log(datos);});
+  deleteAdds(id:any){
+    console.log(id);
+    this.servicio.deleteAdd(id).subscribe(datos=>{console.log(datos);});
   }
 }
