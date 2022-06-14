@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BackTalkService } from 'src/app/services/back-talk.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  userData:any={};
+  constructor( private servicio: BackTalkService) { }
 
   ngOnInit(): void {
+    this.servicio.getUser().subscribe( params => {
+      this.userData = params;
+    })
   }
-
 }

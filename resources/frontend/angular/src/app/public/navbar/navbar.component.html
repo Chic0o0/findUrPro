@@ -17,22 +17,22 @@
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-5">
-          <li class="nav-item">
+          <li class="nav-item logged" *ngIf="userData.id">
             <a class="nav-link active" aria-current="page" routerLink="/profile">Profile</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item logged " *ngIf="userData.id">
             <a class="nav-link active" aria-current="page" routerLink="/search">Search</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item logged" *ngIf="userData.id">
             <a class="nav-link active" aria-current="page" routerLink="/favourites">Favourites</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item noLogged" *ngIf="!userData.id">
             <a class="nav-link active" aria-current="page" routerLink="/register">Register</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item noLogged" *ngIf="!userData.id">
             <a class="nav-link active" aria-current="page" routerLink="/login">Login</a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item logged" *ngIf="userData.id">
             <a class="nav-link active" aria-current="page" routerLink="/logout">Logout</a>
           </li>
         </ul>
