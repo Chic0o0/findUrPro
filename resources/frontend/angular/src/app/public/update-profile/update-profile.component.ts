@@ -20,7 +20,6 @@ export class UpdateProfileComponent implements OnInit {
       this.profileData = params;
     })
     
-    // Hacer similar
     this.servicio.readAdd().subscribe( params => {
       this.addsData = params;
     })

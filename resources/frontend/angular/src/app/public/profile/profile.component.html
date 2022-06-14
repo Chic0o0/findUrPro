@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <img src="" alt="userPhoto">
+          <img src="assets/media/userBlank.png" class="rounded mx-auto d-block w-50" alt="userPhoto">
         </div>
         <div class="col-sm-4">
           <p>Name: {{profileData.name}}</p>
@@ -20,5 +20,17 @@
       </div>
     </div>
     <h2>Ur adds</h2>
-    <button type="button" class="btn btn-secondary" routerLink="/updateprofile">Update your data</button>
+    <button class="btn btn-primary" (click)="showAdds()">Show your adds</button>
+    <div class="col-12 col-lg-4" *ngFor="let add of userAddsData">
+      <div class="card mb-3 mt-3">
+        <p><img src="assets/media/userBlank.png" class="card-img-top" alt="photoAdd"></p>
+        <div class="card-body">
+          <h5 class="card-title">{{add.title}}</h5>
+          <p class="card-text">{{add.text}}</p>
+          <p class="card-text">{{add.prize}}</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" routerLink="/updateprofile">Update your data</button>
 </div>

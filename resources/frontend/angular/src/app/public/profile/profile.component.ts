@@ -9,11 +9,13 @@ import { BackTalkService } from 'src/app/services/back-talk.service';
 export class ProfileComponent implements OnInit {
   
   profileData:any = {};
+  addsData:any = {};
+  
+  userAddsData:any = [];
 
   constructor(private servicio: BackTalkService) {
     
   }
-
   
   ngOnInit(): void {
     // Intento de mostrar en el componente datos del usuario, salio mal
@@ -27,6 +29,22 @@ export class ProfileComponent implements OnInit {
 
     this.servicio.getUser().subscribe( params => {
       this.profileData = params;
-    })
+    });
+
+    this.servicio.readAdd().subscribe( params => {
+      this.addsData = params;
+    });
+  }
+
+  showAdds(){
+    this.userAddsData = [];
+
+    for (const value of this.addsData) {
+      if(value.user_id == this.profileData.id){
+        this.userAddsData.push(value);
+        console.log(value);
+      }
+    }
+    console.log(this.userAddsData);
   }
 }
