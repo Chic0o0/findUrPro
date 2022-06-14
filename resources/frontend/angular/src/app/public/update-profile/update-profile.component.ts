@@ -95,6 +95,8 @@ export class UpdateProfileComponent implements OnInit {
   }
 
   showAdds(){
+    this.userAddsData = [];
+
     for (const value of this.addsData) {
       if(value.user_id == this.profileData.id){
         this.userAddsData.push(value);

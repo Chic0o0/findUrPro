@@ -19,7 +19,7 @@ Route::post('api/uAdd', [AddsController::class, 'update'])
                 ->middleware('auth')
                 ->name('updateAdd');
 
-Route::post('api/dAdd', [AddsController::class, 'delete'])
+Route::post('api/dAdd{id}', [AddsController::class, 'delete'])
                 ->middleware('auth')
                 ->name('deleteAdd');
 

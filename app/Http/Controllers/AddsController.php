@@ -127,14 +127,16 @@ class AddsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete(Request $id)
+    public function delete($id)
     {
+        // $idNumber = $id;
         // print $id;
         // return $add = DB::table('adds')->where('id', $id)->delete();
         // return $add = Adds::delete()->where('id', $id);
         
         // The fucking parameter does not work, this is what I can do for now
-        DB::table('adds')->delete($id);
+        // DB::table('adds')->delete($id);
+        return DB::table('adds')->delete($id);
 
         return response();
     }
