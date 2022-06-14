@@ -40,6 +40,6 @@ Route::post('api/logout', [AuthenticatedSessionController::class, 'destroy'])
 
 // Routes for user table, not Breeze original
 
-Route::post('api/update-users', [RegisteredUserController::class, 'updating'])
+Route::post('api/update-users{id}', [RegisteredUserController::class, 'updating'])
                 ->middleware('auth')
                 ->name('update.users');

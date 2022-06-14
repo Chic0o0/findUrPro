@@ -18,6 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
         'name',
         'surname',
         'email',
@@ -30,6 +31,7 @@ class User extends Authenticatable
         'pro'
     ];
     protected $updatable = [
+        'id',
         'name',
         'surname',
         'email',

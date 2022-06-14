@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use DB;
 
 class RegisteredUserController extends Controller
 {
@@ -59,21 +60,39 @@ class RegisteredUserController extends Controller
         return response()->noContent();
     }
 
-    public function updating(Request $request, User $updatable){
+    public function updating(Request $request){
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255'
+            // , 'unique:users'
+            ],
             'number' => ['required', 'max:255'],
             'CP' => ['required', 'string', 'max:255'],
             'adress' => ['required', 'string', 'max:255'],
             'city' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
             'password' => ['required', Rules\Password::defaults()
-                // ,'confirmed'
+            // ,'confirmed'
             ],
         ]);
+    
+        return DB::table('users')->update([ 
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'email' => $request->email,
+            'number' => $request->number,
+            'CP' => $request->CP,
+            'adress' => $request->adress,
+            'city' => $request->city,
+            'country' => $request->country,
+            'password' => Hash::make($request->password),
+        ]);
+        
+        return response();
+        
+        // DB::table('users')->update($request->all());
 
         // $updatable->update($request->all());
 
@@ -89,7 +108,9 @@ class RegisteredUserController extends Controller
         //     'password' => Hash::make($request->password),
         // ]);
 
-        // DB::table('user')->update([ 
+
+        
+        // return $user = (new User)->update([ 
         //     'name' => $request->name,
         //     'surname' => $request->surname,
         //     'email' => $request->email,
@@ -99,19 +120,7 @@ class RegisteredUserController extends Controller
         //     'city' => $request->city,
         //     'country' => $request->country,
         //     'password' => Hash::make($request->password),
-        // ]);
-
-        return $user = (new User)->update([ 
-            'name' => $request->name,
-            'surname' => $request->surname,
-            'email' => $request->email,
-            'number' => $request->number,
-            'CP' => $request->CP,
-            'adress' => $request->adress,
-            'city' => $request->city,
-            'country' => $request->country,
-            'password' => Hash::make($request->password),
-        ]); 
+        // ]); 
 
 
         // The explanation below is probably wrong, the error probably has to do with the routes and not sending a JSON
@@ -119,7 +128,5 @@ class RegisteredUserController extends Controller
         // Here Breeze does not admit laravel update method. The error: 
         // "Symfony\\Component\\HttpFoundation\\Response::setContent(): Argument #1 ($content) must be of type ?string, Illuminate\\Routing\\ResponseFactory given, called in C:\\xampp\\htdocs\\findUrPro\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php on line 72"
         // Furthermore, I havent found more documentation about a method that provides an update option on Breeze API, so its a hard lock?
-        
-        return response();
     }
 }

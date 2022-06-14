@@ -18,7 +18,7 @@ return new class extends Migration
             $table->boolean('pro');
             $table->string('name');
             $table->string('surname');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->unsignedBigInteger('number');
             $table->unsignedBigInteger('CP');
             $table->string('adress');

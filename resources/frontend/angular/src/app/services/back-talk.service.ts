@@ -25,7 +25,7 @@ export class BackTalkService {
   }
 
   updateUser(usuario:any):Observable<any>{
-    const url = 'api/update-users'
+    const url = 'api/update-users' + usuario.id;
     return this.http.post<any>(url, usuario);
   }
 

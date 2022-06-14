@@ -25,13 +25,6 @@ export class UpdateProfileComponent implements OnInit {
       this.addsData = params;
     })
 
-    for (const value of this.addsData) {
-      if(value.user_id == this.profileData.id){
-        this.userAddsData.push(value);
-        console.log(value);
-      }
-    }
-
     // element has an any type
     // this.addsData.forEach(element => {
     //   if(element.user_id = this.profileData.id){
@@ -41,6 +34,7 @@ export class UpdateProfileComponent implements OnInit {
   }
 
   updateInfo(){
+    console.log(this.profileData);
     let info = document.querySelectorAll("input");
 
     info.forEach(element => {
@@ -48,6 +42,7 @@ export class UpdateProfileComponent implements OnInit {
     });
 
     let userInfo = {
+      id: this.profileData.id,
       name: info[0].value,
       surname: info[1].value,
       email: info[2].value,
