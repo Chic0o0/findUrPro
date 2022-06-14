@@ -109,16 +109,23 @@ class AddsController extends Controller
             'prize' => 'required'
         ]);
 
-        return $user = Adds::update([
-            'photo' =>$request->photo,
-            'text' =>$request->text,
-            'title' =>$request->title,
-            'prize' =>$request->prize
+        return DB::table('adds')->update([ 
+            'photo' => $request->photo,
+            'text' => $request->text,
+            'title' => $request->title,
+            'prize' => $request->prize
         ]);
 
-        // return $updateable->update($request->all());
-
         return response();
+
+        // return $user = Adds::update([
+        //     'photo' =>$request->photo,
+        //     'text' =>$request->text,
+        //     'title' =>$request->title,
+        //     'prize' =>$request->prize
+        // ]);
+
+        // return $updateable->update($request->all());
     }
 
     /**

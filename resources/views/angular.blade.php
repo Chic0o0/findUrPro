@@ -9,7 +9,7 @@
 <body>
   <app-root></app-root>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="/assets/angular/runtime.27845ceb5aedcb1f.js" type="module"></script><script src="/assets/angular/polyfills.2bc674d83458c252.js" type="module"></script><script src="/assets/angular/main.7ef1e87c1033d87f.js" type="module"></script>
+<script src="/assets/angular/runtime.27845ceb5aedcb1f.js" type="module"></script><script src="/assets/angular/polyfills.2bc674d83458c252.js" type="module"></script><script src="/assets/angular/main.b0170b7084463518.js" type="module"></script>
 
 
 <style>
