@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackTalkService } from 'src/app/services/back-talk.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +9,7 @@ import { BackTalkService } from 'src/app/services/back-talk.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private servicio: BackTalkService) { }
+  constructor(private servicio: BackTalkService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -36,5 +37,7 @@ export class RegisterComponent implements OnInit {
     console.log(usuario);
     this.servicio.addUser(usuario)
     .subscribe(datos=>{console.log(datos);});
+
+    this.router.navigate(['profile']);
   }
 }

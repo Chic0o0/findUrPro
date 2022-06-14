@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackTalkService } from 'src/app/services/back-talk.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logout',
@@ -8,7 +9,7 @@ import { BackTalkService } from 'src/app/services/back-talk.service';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(private servicio: BackTalkService) { }
+  constructor(private servicio: BackTalkService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -19,5 +20,6 @@ export class LogoutComponent implements OnInit {
     this.servicio.logoutUser(usuario).subscribe(datos=>{
     console.log(datos);
     });
-    }
+    this.router.navigate(['home']);
+   }
 }

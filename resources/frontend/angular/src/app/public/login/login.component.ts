@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackTalkService } from 'src/app/services/back-talk.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   userData:any={};
 
-  constructor(private servicio: BackTalkService) {
+  constructor(private servicio: BackTalkService, private router:Router) {
     
   }
 
@@ -38,5 +39,7 @@ export class LoginComponent implements OnInit {
 
     // Linea que pretende meter la data en datosUser, faltan parámetros (???)
     // this.datosUser = this.servicio.loginUser(usuario).subscribe(datos=>{return datos});
+
+    this.router.navigate(['profile']);
   }
 }

@@ -55,6 +55,8 @@ export class UpdateProfileComponent implements OnInit {
     console.log(userInfo);
     this.servicio.updateUser(userInfo)
     .subscribe(datos=>{console.log(datos);});
+
+    window.alert("Information updated succesfully!")
   }
   
   insertAdd(){
@@ -72,6 +74,8 @@ export class UpdateProfileComponent implements OnInit {
     console.log(addInfo);
     this.servicio.createAdd(addInfo)
     .subscribe(datos=>{console.log(datos);});
+
+    window.alert("Add uploaded succesfully!")
   }
 
   updateAdds(){
@@ -86,6 +90,8 @@ export class UpdateProfileComponent implements OnInit {
     console.log(addInfo);
     this.servicio.updateAdd(addInfo)
     .subscribe(datos=>{console.log(datos);});
+
+    window.alert("Add updated succesfully!")
   }
 
   showAdds(){
@@ -104,5 +110,7 @@ export class UpdateProfileComponent implements OnInit {
   deleteAdds(id:any){
     console.log(id);
     this.servicio.deleteAdd(id).subscribe(datos=>{console.log(datos);});
+
+    window.alert("Add deleated succesfully!")
   }
 }
