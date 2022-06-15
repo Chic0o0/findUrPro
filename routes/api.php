@@ -18,6 +18,7 @@ Route::middleware(['auth:sanctum'])->get('api/user', function (Request $request)
     return $request->user();
 });
 
+// Idea to use more middlewares went wrong
 // Route::middleware(['auth:sanctum'])->get('api/adds', function (Request $request) {
 //     return $request->adds();
 // });

@@ -47,6 +47,7 @@ export class UpdateProfileComponent implements OnInit {
       country: info[7].value,
       password: info[8].value,
     }
+
     this.servicio.updateUser(userInfo)
     .subscribe(datos=>{return datos});
 
@@ -72,8 +73,6 @@ export class UpdateProfileComponent implements OnInit {
 
   updateAdds(idAdd:any){
     let info = document.querySelectorAll("input");
-    console.log(this.addsData);
-    console.log(idAdd);
     let addInfo = {
       id : idAdd,
       photo: info[13].value,
@@ -81,7 +80,6 @@ export class UpdateProfileComponent implements OnInit {
       title: info[15].value,
       prize: info[16].value,
     }
-    console.log(addInfo);
     this.servicio.updateAdd(addInfo)
     .subscribe(datos=>{return datos});
 

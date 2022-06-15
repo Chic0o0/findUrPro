@@ -58,7 +58,7 @@ class RegisteredUserController extends Controller
         return response()->noContent();
     }
 
-    public function updating(Request $request){
+    public function updating(Request $request, $id){
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -76,7 +76,7 @@ class RegisteredUserController extends Controller
             ],
         ]);
     
-        return DB::table('users')->update([ 
+        return DB::table('users')->where('id', $id)->update([ 
             'name' => $request->name,
             'surname' => $request->surname,
             'email' => $request->email,

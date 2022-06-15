@@ -24,9 +24,9 @@ export class BackTalkService {
     return this.http.post<any>(url, usuario);
   }
 
-  updateUser(usuario:any):Observable<any>{
-    const url = 'api/update-users' + usuario.id;
-    return this.http.post<any>(url, usuario);
+  updateUser(userInfo:any):Observable<any>{
+    const url = 'api/update-users' + userInfo.id;
+    return this.http.post<any>(url, userInfo);
   }
 
   getUser(){
@@ -46,7 +46,6 @@ export class BackTalkService {
 
   updateAdd(addInfo:any):Observable<any>{
     const url = 'api/uAdd' + addInfo.id;
-    console.log(addInfo.id);
     return this.http.post<any>(url, addInfo);
   }
 
