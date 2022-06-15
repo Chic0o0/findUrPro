@@ -51,7 +51,6 @@ export class BackTalkService {
 
   deleteAdd(id:any):Observable<any>{
     const url = 'api/dAdd' + id;
-    console.log(id);
     return this.http.post<any>(url, id);
   }
 

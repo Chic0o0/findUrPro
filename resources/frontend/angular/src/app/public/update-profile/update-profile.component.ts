@@ -33,12 +33,7 @@ export class UpdateProfileComponent implements OnInit {
   }
 
   updateInfo(){
-    console.log(this.profileData);
     let info = document.querySelectorAll("input");
-
-    info.forEach(element => {
-      console.log(element.value);
-    });
 
     let userInfo = {
       id: this.profileData.id,
@@ -52,9 +47,8 @@ export class UpdateProfileComponent implements OnInit {
       country: info[7].value,
       password: info[8].value,
     }
-    console.log(userInfo);
     this.servicio.updateUser(userInfo)
-    .subscribe(datos=>{console.log(datos);});
+    .subscribe(datos=>{return datos});
 
     window.alert("Information updated succesfully!")
   }
@@ -62,7 +56,6 @@ export class UpdateProfileComponent implements OnInit {
   insertAdd(){
     
     let info = document.querySelectorAll("input");
-    console.log(this.profileData);
 
     let addInfo = {
       user_id : this.profileData.id,
@@ -71,9 +64,8 @@ export class UpdateProfileComponent implements OnInit {
       title: info[11].value,
       prize: info[12].value,
     }
-    console.log(addInfo);
     this.servicio.createAdd(addInfo)
-    .subscribe(datos=>{console.log(datos);});
+    .subscribe(datos=>{return datos});
 
     window.alert("Add uploaded succesfully!")
   }
@@ -87,9 +79,8 @@ export class UpdateProfileComponent implements OnInit {
       title: info[15].value,
       prize: info[16].value,
     }
-    console.log(addInfo);
     this.servicio.updateAdd(addInfo)
-    .subscribe(datos=>{console.log(datos);});
+    .subscribe(datos=>{return datos});
 
     window.alert("Add updated succesfully!")
   }
@@ -100,16 +91,13 @@ export class UpdateProfileComponent implements OnInit {
     for (const value of this.addsData) {
       if(value.user_id == this.profileData.id){
         this.userAddsData.push(value);
-        console.log(value);
       }
     }
 
-    console.log(this.userAddsData);
   }
 
   deleteAdds(id:any){
-    console.log(id);
-    this.servicio.deleteAdd(id).subscribe(datos=>{console.log(datos);});
+    this.servicio.deleteAdd(id).subscribe(datos=>{return datos});
 
     window.alert("Add deleated succesfully!")
   }

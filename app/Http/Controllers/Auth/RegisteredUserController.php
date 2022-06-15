@@ -51,8 +51,6 @@ class RegisteredUserController extends Controller
             'pro' => $request->pro
         ]);
 
-        print_r($user);
-
         event(new Registered($user));
 
         Auth::login($user);

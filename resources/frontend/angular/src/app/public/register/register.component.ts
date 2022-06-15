@@ -34,9 +34,8 @@ export class RegisterComponent implements OnInit {
       pro:datos[10].checked
     };
 
-    console.log(usuario);
     this.servicio.addUser(usuario)
-    .subscribe(datos=>{console.log(datos);});
+    .subscribe(datos=>{return datos});
 
     this.router.navigate(['profile']);
   }

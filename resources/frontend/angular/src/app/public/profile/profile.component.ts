@@ -25,7 +25,6 @@ export class ProfileComponent implements OnInit {
     // })
 
     // this.datosUser = this.servicio.getUser().subscribe(datosUser=>{return datosUser});
-    // console.log(this.datosUser);
 
     this.servicio.getUser().subscribe( params => {
       this.profileData = params;
@@ -42,9 +41,7 @@ export class ProfileComponent implements OnInit {
     for (const value of this.addsData) {
       if(value.user_id == this.profileData.id){
         this.userAddsData.push(value);
-        console.log(value);
       }
     }
-    console.log(this.userAddsData);
   }
 }

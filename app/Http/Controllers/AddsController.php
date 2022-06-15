@@ -81,7 +81,6 @@ class AddsController extends Controller
         
         // $qry = 'SELECT * FROM adds WHERE user_id LIKE "1"';
         // $ppl = DB::select($qry);
-        // print_r($ppl);
         // return $ppl;
 
         // return $add->read();
@@ -137,7 +136,6 @@ class AddsController extends Controller
     public function delete($id)
     {
         // $idNumber = $id;
-        // print $id;
         // return $add = DB::table('adds')->where('id', $id)->delete();
         // return $add = Adds::delete()->where('id', $id);
         

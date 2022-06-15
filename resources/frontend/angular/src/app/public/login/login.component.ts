@@ -26,20 +26,17 @@ export class LoginComponent implements OnInit {
       password: datos[1].value
     };
 
-    console.log(usuario);
-
-    // This works, tarda un poco mas creo que porque esta usando el middleware
     this.servicio.loginUser(usuario).subscribe(datosUser=>{this.userData = datosUser});
+    this.router.navigate(['profile']);
+    
+    // This works, tarda un poco mas creo que porque esta usando el middleware
     //redirigir luego a profile y usar las variables
 
     // This does not work
-    console.log(this.userData);
-
     //Necsito sacar datosUser a una variable de alguna forma para manejar los datos
 
     // Linea que pretende meter la data en datosUser, faltan parámetros (???)
     // this.datosUser = this.servicio.loginUser(usuario).subscribe(datos=>{return datos});
 
-    this.router.navigate(['profile']);
   }
 }
