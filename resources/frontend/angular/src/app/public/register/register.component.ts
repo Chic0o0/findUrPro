@@ -37,6 +37,6 @@ export class RegisterComponent implements OnInit {
     this.servicio.addUser(usuario)
     .subscribe(datos=>{return datos});
 
-    this.router.navigate(['profile']);
+    this.router.navigate(['login']);
   }
 }

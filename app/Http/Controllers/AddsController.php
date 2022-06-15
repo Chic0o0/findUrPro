@@ -99,7 +99,7 @@ class AddsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Adds $updateable)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'photo' => 'required',
@@ -108,7 +108,7 @@ class AddsController extends Controller
             'prize' => 'required'
         ]);
 
-        return DB::table('adds')->update([ 
+        return DB::table('adds')->where('id', $id)->update([ 
             'photo' => $request->photo,
             'text' => $request->text,
             'title' => $request->title,

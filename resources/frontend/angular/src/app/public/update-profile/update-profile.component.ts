@@ -70,15 +70,18 @@ export class UpdateProfileComponent implements OnInit {
     window.alert("Add uploaded succesfully!")
   }
 
-  updateAdds(){
+  updateAdds(idAdd:any){
     let info = document.querySelectorAll("input");
+    console.log(this.addsData);
+    console.log(idAdd);
     let addInfo = {
-      user_id : this.profileData.id,
+      id : idAdd,
       photo: info[13].value,
       text: info[14].value,
       title: info[15].value,
       prize: info[16].value,
     }
+    console.log(addInfo);
     this.servicio.updateAdd(addInfo)
     .subscribe(datos=>{return datos});
 

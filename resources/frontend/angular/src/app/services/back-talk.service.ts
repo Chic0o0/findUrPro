@@ -44,9 +44,10 @@ export class BackTalkService {
     return this.http.get<any>(url);
   }
 
-  updateAdd(add:any):Observable<any>{
-    const url = 'api/uAdd' + add.id;
-    return this.http.post<any>(url, add);
+  updateAdd(addInfo:any):Observable<any>{
+    const url = 'api/uAdd' + addInfo.id;
+    console.log(addInfo.id);
+    return this.http.post<any>(url, addInfo);
   }
 
   deleteAdd(id:any):Observable<any>{
